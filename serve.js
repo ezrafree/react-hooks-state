@@ -27,18 +27,15 @@ portscanner.findAPortNotInUse(preferredPorts).then((available) => {
   var listener = app.listen(port || available || 0, function (err) {
     if (err) consola.error(chalk.white.bold('Error: '), `${err}`)
 
-    consola.info(
-      'Listening on port ',
-      chalk.white.bold(listener.address().port),
-    )
+    consola.info(`Listening on port ${listener.address().port}`)
 
     consola.success(
-      chalk.white.bold('Local:            '),
+      chalk.white.bold('Local:           '),
       `http://localhost:${listener.address().port}`,
     )
 
     consola.success(
-      chalk.white.bold('On Your Network:  '),
+      chalk.white.bold('On Your Network: '),
       `http://${ip.address()}:${listener.address().port}`,
     )
   })
