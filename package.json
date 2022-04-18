@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "node serve.js",
+    "serve": "nodemon serve.js",
     "ci": "rm -rfv ./node_modules && rm -f ./yarn.lock && yarn",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
@@ -30,6 +30,20 @@
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "chalk": "4.1.2",
+    "consola": "^2.15.3",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-security": "^1.4.0",
+    "ip": "^1.1.5",
+    "nodemon": "^2.0.15",
+    "portscanner": "^2.2.0",
+    "prettier": "^2.6.2"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -47,15 +61,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "@typescript-eslint/parser": "^5.19.0",
-    "consola": "^2.15.3",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-react": "^1.1.7",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-security": "^1.4.0",
-    "prettier": "^2.6.2"
   }
 }
